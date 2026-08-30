@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Zumo Financial Promotions Sandbox</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main>
+      <section class="intro">
+        <span class="eyebrow">SANDBOX CONSOLE</span>
+        <h1>Launch a financial promotions journey.</h1>
+        <p>Create a short-lived PKCE session for an existing Zumo sandbox user, then continue securely in Zumo’s hosted web app.</p>
+        <div class="steps" aria-label="Journey steps">
+          <span><b>01</b> Risk warning</span>
+          <span><b>02</b> Investor category</span>
+          <span><b>03</b> Appropriateness</span>
+        </div>
+      </section>
+      <section class="card">
+        <div class="status"><i></i> Zumo sandbox</div>
+        <h2>Start a test session</h2>
+        <p class="muted">Create a generated test user in your organisation, or enter the ID of an existing sandbox user.</p>
+        <button id="create-user" class="secondary" type="button">Create sandbox test user <span>＋</span></button>
+        <div id="created-user" class="created-user" hidden></div>
+        <div class="divider"><span>or use an existing user</span></div>
+        <form id="launch-form">
+          <label for="user-id">Sandbox user ID</label>
+          <input id="user-id" name="userId" type="text" placeholder="00000000-0000-0000-0000-000000000000" autocomplete="off" required />
+          <button type="submit">Create session & launch <span>↗</span></button>
+        </form>
+        <p id="message" role="status" aria-live="polite"></p>
+        <small>Your client secret remains on this local server. Authorization codes are single-use and expire after five minutes.</small>
+      </section>
+    </main>
+    <footer>Powered by Zumo Trade · Test data only</footer>
+    <script src="/app.js"></script>
+  </body>
+</html>
